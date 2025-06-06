@@ -11,24 +11,32 @@
       padding: 0;
       box-sizing: border-box;
     }
+    html, body {
+      height: 100%;
+    }
     body {
-      background-color: #000;
+      background-color: #231f20;
       color: #fff;
       font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
     }
     .logo {
-      max-width: 80%;
+      max-width: 100%;
       height: auto;
-      margin-bottom: 2rem;
+      width: 350px;
+      margin-bottom: 1rem;
     }
     .button {
-      background-color: #000;
+      background-color: #231f20;
       color: #fff;
       border: 2px solid #fff;
       padding: 0.5rem 1rem;
@@ -42,12 +50,14 @@
       display: inline-block;
     }
     .button:hover {
-      background-color: #222;
+      background-color: #3a3637;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logo" class="logo" />
-  <a href="https://campfire.nianticlabs.com/discover" class="button" target="_blank" rel="noopener noreferrer">Get Connected</a>
+  <div class="container">
+    <img src="logo.svg" alt="Logo" class="logo" />
+    <a href="https://campfire.nianticlabs.com/discover" class="button" target="_blank" rel="noopener noreferrer">Get Connected</a>
+  </div>
 </body>
 </html>
