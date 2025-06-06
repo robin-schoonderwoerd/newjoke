@@ -34,6 +34,7 @@
       height: auto;
       width: 350px;
       margin-bottom: 1rem;
+      animation: pulse 1s ease-in-out;
     }
     .button {
       background-color: #231f20;
@@ -48,15 +49,28 @@
       transition: background-color 0.3s, color 0.3s;
       text-decoration: none;
       display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 1.2s;
     }
     .button:hover {
       background-color: #3a3637;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="logo.svg" alt="Logo" class="logo" />
+    <img src="logo.svg" alt="Logo" class="logo pulse" />
     <a href="https://campfire.nianticlabs.com/discover" class="button" target="_blank" rel="noopener noreferrer">Get Connected</a>
   </div>
 </body>
